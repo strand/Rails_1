@@ -12,7 +12,7 @@
   <% @project.tickets.each do |ticket| %>
     <li>
       #<%= ticket.id %> -
-      <h2><%= link_to ticket.title, [@project, ticket] %></h2>
+      <%= link_to ticket.title, [@project, ticket] %>
     </li>
   <% end %>
 </ul>
