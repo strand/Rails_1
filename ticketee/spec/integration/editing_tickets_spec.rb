@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 feature "Editing tickets" do
+  before do
+    define_permission!(user, "view", project)
+  end
+
   let!(:project) { Factory(:project) }
   let!(:user) { Factory(:confirmed_user) }
   let!(:ticket) do
